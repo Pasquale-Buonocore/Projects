@@ -1,6 +1,5 @@
 from typing import KeysView
 import sys
-import Tkinter
 
 
 def fromDegToLat(value):
@@ -14,15 +13,12 @@ def fromDegToLat(value):
         print("LAT is out of range. Displaying AMBER_DASHES")
     else:
         # Compute K
-        if (value >= 0.0):
-            K = 'N'
-        else:
-            K = 'S'
+        K = 'N' if (value >= 0.0) else 'S'
 
         # Compute YY and XX
         value = abs(value)
         Decimals = (value - float(XX))*60
-        YY = int(Decimals)
+        YY = int(Decimals+0.5)
         ZZ = int((Decimals - float(YY))*100)
 
         print(K +' '+ str(XX) + '°' + str(YY) + '.' + str(ZZ) + "'")
@@ -38,10 +34,7 @@ def fromDegToLong(value):
         print("LONG is out of range. Displaying AMBER_DASHES")
     else:
         # Compute K
-        if (value >= 0.0):
-            K = 'E'
-        else:
-            K = 'W'
+        K = 'E' if (value >= 0.0) else 'W'
 
         # Compute YY and XX
         value = abs(value)
