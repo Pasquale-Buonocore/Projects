@@ -1,4 +1,4 @@
-disp("Starting a MATLAB shared session!")
+disp("Starting a MATLAB shared session! Let's try to use Matlab within Python!")
 
 % Let this session be shared
 matlab.engine.shareEngine
