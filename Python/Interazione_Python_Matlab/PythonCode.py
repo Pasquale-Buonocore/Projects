@@ -14,7 +14,7 @@ if len(engs) < 1:
     MatlabProcess = os.path.abspath('LaunchMatlabSession\Launch_Matlab.bat')
     subprocess.call(MatlabProcess)
 
-    # Find the just started MATLAB process process
+    # Find the just started MATLAB process
     while (not engs):
         engs = matlab.engine.find_matlab()
         time.sleep(0.1)
