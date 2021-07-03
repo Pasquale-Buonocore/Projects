@@ -27,4 +27,25 @@ eng = matlab.engine.connect_matlab(engs[0])
 # Call the function StampaPippo which has to be in the MATLAB folder.
 # This powerful interaction allows us to use MATLAB function and re-use its result in python.
 pippo = eng.StampaPippo(2)
-print(str(pippo))
+
+################################################
+# Modify the variable1 in the matlab workspace #
+################################################
+print("The variable1_InMatlabWorkspace is: " +
+      str(eng.workspace['variable1_InMatlabWorkspace']) + ". Let's modify it.")
+
+eng.workspace['variable1_InMatlabWorkspace'] = eng.workspace['variable1_InMatlabWorkspace'] + 10
+
+print("The variable1_InMatlabWorkspace has been modified to: " +
+      str(eng.workspace['variable1_InMatlabWorkspace']) + ".")
+
+##############################################
+# Add a new variable in the Matlab workspace #
+##############################################
+exist = ' True' if eng.eval('exist("new_var")') else ' False'
+print("Does the variable new_var exist?" + exist)
+
+eng.workspace['new_var'] = 10
+
+exist = ' True' if eng.eval('exist("new_var")') else ' False'
+print("Does the variable new_var exist?" + exist)
