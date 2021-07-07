@@ -1,6 +1,8 @@
 How the compilation process work:
 
 Four Steps of Compilation: preprocessing, compiling, assembly, linking.
+<img src=![image](https://user-images.githubusercontent.com/63344599/124754452-881aa480-df2a-11eb-99ad-41c04178cbeb.png) alt="drawing" width="200"/>
+
 
 ![image](https://user-images.githubusercontent.com/63344599/124754452-881aa480-df2a-11eb-99ad-41c04178cbeb.png)
 
