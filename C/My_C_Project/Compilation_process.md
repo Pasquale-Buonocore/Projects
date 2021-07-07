@@ -2,7 +2,7 @@
 <h2>How the compilation process work:</h2>
 Four Steps of Compilation: preprocessing, compiling, assembly, linking.
 
-<img src="https://user-images.githubusercontent.com/63344599/124754452-881aa480-df2a-11eb-99ad-41c04178cbeb.png" width="200" height="200" />
+<img src="https://user-images.githubusercontent.com/63344599/124754452-881aa480-df2a-11eb-99ad-41c04178cbeb.png" width="500" height="500" />
 
 <h2>Preprocessing:</h2>
 Preprocessing is the first step. The preprocessor obeys commands that begin with # (known as directives) by:
