@@ -1,6 +1,5 @@
 from typing import KeysView
 import sys
-import Tkinter
 
 
 def fromDegToLat(value):
